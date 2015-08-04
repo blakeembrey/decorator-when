@@ -1,6 +1,6 @@
 {
   "name": "decorator-when",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Simple ES7 decorator for short-cutting method execution",
   "main": "lib/index.js",
   "files": [
