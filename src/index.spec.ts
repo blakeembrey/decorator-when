@@ -38,4 +38,14 @@ describe('decorator when', () => {
 
     expect(s.callCount).to.equal(0)
   })
+
+  it('should work with getters and setters', () => {
+    class Demo {
+      @when(() => true)
+      get prop () { return true }
+      set prop (x: any) {}
+    }
+
+    expect(new Demo().prop).to.be.true
+  })
 })

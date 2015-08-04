@@ -1,6 +1,16 @@
 function when (check: Function) {
-  return function (value: any, name: string, descriptor: PropertyDescriptor) {
-    descriptor.value = wrap(descriptor.value, check)
+  return function (target: any, name: string, descriptor: PropertyDescriptor) {
+    if (descriptor.get) {
+      descriptor.get = wrap(descriptor.get, check)
+    }
+
+    if (descriptor.set) {
+      descriptor.set = wrap(descriptor.set, check)
+    }
+
+    if (descriptor.value) {
+      descriptor.value = wrap(descriptor.value, check)
+    }
   }
 }
 
