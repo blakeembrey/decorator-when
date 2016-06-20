@@ -7,11 +7,12 @@
     "noImplicitAny": true,
     "removeComments": true,
     "sourceMap": true,
+    "inlineSources": true,
     "experimentalDecorators": true
   },
   "files": [
     "src/index.ts",
     "src/index.spec.ts",
-    "typings/tsd.d.ts"
+    "typings/index.d.ts"
   ]
 }
