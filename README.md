@@ -1,11 +1,10 @@
 # Decorator When
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/blakeembrey/decorator-when.svg)](https://greenkeeper.io/)
-
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/blakeembrey/decorator-when.svg)](https://greenkeeper.io/)
 
 > Simple ES7 decorator for short-cutting method execution.
 
