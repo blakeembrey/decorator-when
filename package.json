@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/blakeembrey/decorator-when",
   "devDependencies": {
-    "chai": "^3.2.0",
+    "chai": "^4.0.0",
     "istanbul": "^0.4.4",
     "mocha": "^3.0.0",
     "sinon": "^2.2.0",
