@@ -14,7 +14,7 @@
     "test-spec": "mocha lib/**/*.spec.js -R spec --bail",
     "test-cov": "istanbul cover -x *.spec.js node_modules/mocha/bin/_mocha -- lib/**/*.spec.js -R spec --bail",
     "test": "npm run build && npm run lint && npm run test-cov",
-    "prepublish": "typings install && npm run build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -39,11 +39,13 @@
   },
   "homepage": "https://github.com/blakeembrey/decorator-when",
   "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "@types/sinon": "^2.3.5",
     "chai": "^4.0.0",
     "istanbul": "^0.4.4",
     "mocha": "^4.0.1",
     "sinon": "^4.0.0",
-    "typescript": "^2.0.3",
-    "typings": "^2.1.1"
+    "typescript": "^2.0.3"
   }
 }
