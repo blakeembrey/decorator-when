@@ -41,7 +41,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
-    "@types/sinon": "^2.3.5",
+    "@types/sinon": "^4.0.0",
     "chai": "^4.0.0",
     "istanbul": "^0.4.4",
     "mocha": "^4.0.1",
