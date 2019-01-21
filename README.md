@@ -16,19 +16,19 @@ npm install decorator-when --save
 ## Usage
 
 ```js
-import when = require('decorator-when')
+import { when } from "decorator-when";
 
 class Demo {
   @when(Demo.prototype.should)
-  method () {
-    s.apply(this, arguments)
+  method() {
+    s.apply(this, arguments);
   }
-  should () {
-    return Math.random() > 0.5
+  should() {
+    return Math.random() > 0.5;
   }
 }
 
-new Demo().method()
+new Demo().method();
 ```
 
 ## License
