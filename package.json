@@ -1,6 +1,6 @@
 {
   "name": "decorator-when",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Simple decorator for short-cutting method execution",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
