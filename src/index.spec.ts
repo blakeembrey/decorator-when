@@ -1,51 +1,53 @@
-import { spy } from 'sinon'
-import { expect } from 'chai'
-import when = require('./index')
+import { when } from "./index";
 
-describe('decorator when', () => {
-  it('should execute the method', () => {
-    const s = spy()
+describe("decorator when", () => {
+  it("should execute the method", () => {
+    const fn = jest.fn();
 
     class Demo {
       @when(Demo.prototype.should)
-      method () {
-        s.apply(this, arguments)
+      method() {
+        fn.apply(this, arguments);
       }
-      should () {
-        return true
+      should() {
+        return true;
       }
     }
 
-    new Demo().method()
+    new Demo().method();
 
-    expect(s.callCount).to.equal(1)
-  })
+    expect(fn).toBeCalledTimes(1);
+  });
 
-  it('should not execute the method', () => {
-    const s = spy()
+  it("should not execute the method", () => {
+    const fn = jest.fn();
 
     class Demo {
       @when(Demo.prototype.should)
-      method () {
-        s.apply(this, arguments)
+      method() {
+        fn.apply(this, arguments);
       }
-      should () {
-        return false
+      should() {
+        return false;
       }
     }
 
-    new Demo().method()
+    new Demo().method();
 
-    expect(s.callCount).to.equal(0)
-  })
+    expect(fn).toBeCalledTimes(0);
+  });
 
-  it('should work with getters and setters', () => {
+  it("should work with getters and setters", () => {
     class Demo {
       @when(() => true)
-      get prop () { return true }
-      set prop (x: any) {}
+      get prop() {
+        return true;
+      }
+      set prop(x: any) {
+        /* Empty */
+      }
     }
 
-    expect(new Demo().prop).to.be.true
-  })
-})
+    expect(new Demo().prop).toBe(true);
+  });
+});
